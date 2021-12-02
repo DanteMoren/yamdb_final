@@ -8,6 +8,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.viewsets import GenericViewSet, generics
 from rest_framework_simplejwt.tokens import AccessToken
+
 from reviews.filters import TitleFilter
 from reviews.models import Category, Comment, Genre, Review, Title
 from users.models import User
@@ -152,6 +153,7 @@ class UserViewSet(viewsets.ModelViewSet):
                     serializer.update(instance=user,
                                       validated_data=serializer.validated_data)
             return Response(serializer.data, status=status.HTTP_200_OK)
+        return None
 
 
 @api_view(['POST'])
