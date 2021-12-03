@@ -20,7 +20,7 @@ git clone https://github.com/DanteMoren/infra_sp2.git
 ``` 
  
 ``` bash
-cd infra_sp2
+cd infra_sp
 ``` 
  
 Cоздайте файл .env и внесите в него следующие данные: 
