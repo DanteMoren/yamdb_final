@@ -7,7 +7,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol^##zgl9(vs'
 DEBUG = False
 
-ALLOWED_HOSTS = ['*', 'dante-preview.ru', 'www.dante-preview.ru', '62.84.116.183']
+ALLOWED_HOSTS = ['62.84.116.183', 'dante-preview.ru', 'www.dante-preview.ru']
 
 
 INSTALLED_APPS = [
