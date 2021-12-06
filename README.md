@@ -32,18 +32,18 @@ SECRET_KEY= #введите свой ключ из settings.py
 ``` 
  
 Выполните комманды
- 
+
 ``` bash
 docker-compose up -d 
 docker-compose exec web python manage.py migrate --noinput
-docker-compose exec web python manage.py collectstatic --no-input 
-``` 
+docker-compose exec web python manage.py collectstatic --no-input
+```
+
 Выполните комманду для создания суперпользователя и введите логин, почту и пароль
+
 ```bash
 docker-compose exec web python manage.py createsuperuser
 ```
-
-
 
 ## Как зарегистрироваться и получить *JWT-токен*
 
@@ -52,6 +52,6 @@ docker-compose exec web python manage.py createsuperuser
 3. Отправьте POST-запрос с параметрами *username* и *confirmation_code* на эндпоинт ```/api/v1/auth/token/```. В ответе на запрос вы получите *JWT-token*;
 4. После регистрации и получения токена можете отправить PATCH-запрос на эндпоинт ```/api/v1/users/me/``` и заполнить поля в своём профайле (описание полей — в документации).
 
-### Теперь вы можете работать с API проекта, отправляя полученный токен при каждом запросе :) ###
+###Теперь вы можете работать с API проекта, отправляя полученный токен при каждом запросе :) ###
 
 ![example workflow](https://github.com/DanteMoren/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
