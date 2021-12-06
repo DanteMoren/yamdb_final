@@ -46,6 +46,10 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    on:
+      push:
+        branches:
+          - main
     needs: build_and_push_to_docker_hub
     steps:
       - name: executing remote ssh commands to deploy
