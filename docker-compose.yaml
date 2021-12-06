@@ -3,13 +3,14 @@ version: '3.8'
 services:
   db:
     image: postgres:latest
+    restart: unless-stopped
     volumes:
       - postgres_data:/var/lib/postgresql/data
     env_file:
       - ./.env
   web:
     image: dantemoren/yamdb:latest
-    restart: always
+    restart: unless-stopped
     volumes:
       - static_value:/code/static/
       - media_value:/code/media/
@@ -20,7 +21,7 @@ services:
 
   nginx:
     image: nginx:1.19.3
-    restart: always
+    restart: unless-stopped
     ports:
       - "80:80"
 
