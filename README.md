@@ -16,7 +16,7 @@
 Клонируйте репозиторий и перейдите в него в командной строке: 
  
 ``` bash
-git clone https://github.com/DanteMoren/infra_sp2.git
+git clone https://github.com/DanteMoren/yamdb_final.git
 ``` 
  
 ``` bash
@@ -53,5 +53,3 @@ docker-compose exec web python manage.py createsuperuser
 4. После регистрации и получения токена можете отправить PATCH-запрос на эндпоинт ```/api/v1/users/me/``` и заполнить поля в своём профайле (описание полей — в документации).
 
 ###Теперь вы можете работать с API проекта, отправляя полученный токен при каждом запросе :) ###
-
-![example workflow](https://github.com/DanteMoren/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
